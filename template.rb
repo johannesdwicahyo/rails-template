@@ -1,4 +1,4 @@
-RAILS_REQUIREMENT = "~> 5.2.0".freeze
+RAILS_REQUIREMENT = "~> 5.2.3".freeze
 
 def apply_template!
   assert_minimum_rails_version
@@ -81,7 +81,7 @@ def add_template_repository_to_source_path
     at_exit { FileUtils.remove_entry(tempdir) }
     git clone: [
       "--quiet",
-      "https://github.com/mattbrictson/rails-template.git",
+      "https://github.com/johannesdwicahyo/rails-template.git",
       tempdir
     ].map(&:shellescape).join(" ")
 
